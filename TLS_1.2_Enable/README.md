@@ -1,9 +1,10 @@
 # Enable TLS 1.2 with Powershell on Windows Server
 
-1. Press Windows key + X and select Windows PowerShell (Admin) from the menu.
-2. When PowerShell opens, run the following commands:
+    1. Press Windows key + X and select Windows PowerShell (Admin) from the menu.
 
-    PS> Regedit
+    2. When PowerShell opens, run the following commands:
+
+    $
 
     New-Item 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Server' -Force
 
@@ -17,4 +18,4 @@
 
     New-ItemProperty -Path 'HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2\Client' -name 'DisabledByDefault' -value '0' –PropertyType 'DWORD'
 
-    PS>
+    $
